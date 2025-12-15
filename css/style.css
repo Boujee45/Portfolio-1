@@ -195,7 +195,7 @@ ul{
     right: 0;   
 }
 
-.aside .nav-toggler{
+.nav-toggler{
     height: 40px;
     width: 45px;
     border: 1px solid var(--bg-black-50);
@@ -212,7 +212,7 @@ ul{
     justify-content: center;
 }
 
-.aside .nav-toggler span{
+.nav-toggler span{
     height: 2px;
     width: 18px;
     background: var(--skin-color);
@@ -220,7 +220,7 @@ ul{
     position: relative;
 }
 
-.aside .nav-toggler span::before{
+.nav-toggler span::before{
     content: '';
     height: 2px;
     width: 18px;
@@ -230,7 +230,7 @@ ul{
     left: 0;
 }
 
-.aside .nav-toggler span::after{
+.nav-toggler span::after{
     content: '';
     height: 2px;
     width: 18px;
@@ -827,13 +827,14 @@ h3.my-profession{
         max-width: 100%;
     }
 
-    .aside .nav-toggler{
+    .nav-toggler{
         display: flex;
-        position: fixed;
-        left: 0;
-        margin-right: 4.5rem;
-        margin-top: 2.5rem;
-        top: 0;
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.5rem;
+        cursor: pointer;
     }
 
     .aside{
@@ -854,6 +855,15 @@ h3.my-profession{
 
     .aside.active{
         left: 0;
+    }
+
+    .header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        z-index: 100;
     }
 
 
