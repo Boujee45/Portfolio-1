@@ -6,15 +6,26 @@
     <title>My Portfolio</title>
     <link rel="website icon" type="JPG" href="images/IMG_9546 (1).jpg"  class="web-icon">
     <link rel="Stylesheet" href="css/style.css">
-    
+
+    <!--=============== REMIXICONS ===============-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!--========== UNICONS ==========-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+
+    <!--=============== Font Awesome ===============-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
      integrity=
      "sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Style Switcher -->
-     <link rel="Stylesheet" href="css/color-1.css" class="alternate-style" title="color-1" >
-     <link rel="Stylesheet" href="css/color-2.css" class="alternate-style" title="color-2" disabled>
+     <link rel="Stylesheet" href="css/color-1.css" class="alternate-style" title="color-1" disabled>
+     <link rel="Stylesheet" href="css/color-2.css" class="alternate-style" title="color-2" >
      <link rel="Stylesheet" href="css/color-3.css" class="alternate-style" title="color-3" disabled>
      <link rel="Stylesheet" href="css/color-4.css" class="alternate-style" title="color-4" disabled>
      <link rel="Stylesheet" href="css/color-5.css" class="alternate-style" title="color-5" disabled>
@@ -39,11 +50,11 @@
             
 
             <ul class="nav">
-                <li><a href="#home" class="active"><i class="fa fa-home"></i>Home</a></li>
-                <li><a href="#about" class="active"><i class="fa fa-user"></i>About</a></li>
-                <li><a href="#services" class="active"><i class="fa fa-list"></i>Services</a></li>
-                <li><a href="#portfolio" class="active"><i class="fa fa-briefcase"></i>Portfolio</a></li>
-                <li><a href="#contact" class="active"><i class="fa fa-comments"></i>Contact</a></li>
+                <li><a href="#home" class=" nav__link active"><i class="fa fa-home"></i>Home</a></li>
+                <li><a href="#about" class="nav__link"><i class="fa fa-user"></i>About</a></li>
+                <li><a href="#services" class="nav__link"><i class="fa fa-list"></i>Services</a></li>
+                <li><a href="#portfolio" class="nav__link"><i class="fa fa-briefcase"></i>Portfolio</a></li>
+                <li><a href="#contact" class="nav__link"><i class="fa fa-comments"></i>Contact</a></li>
             </ul>
         </div>
         <!--Aside End-->
@@ -56,11 +67,11 @@
                     <div class="row">
                         <div class="home-info padd-15">
                             <h3 class="hello">Hello, my name is <span class="name">Oscar Kariuki</span></h3>
-                            <h3 class="my-profession">I' m a <span class="typing">web designer</span></h3>
+                            <h3 class="my-profession">I' m a <span class="typing"></span></h3>
                             <p>I'm a web Developer.My expertise is to 
                                 create and website design,backend development, and many more...
                             </p>
-                            <a href="#contact" class="btn hire-me">Hire Me</a>
+                            <a href="#about" class="btn hire-me">More About Me</a>
                         </div>
                         <div class="home-img padd-15">
                             <img src="images/IMG_9546.JPG" alt="">
@@ -104,7 +115,7 @@
                                             <p>Age : <span>22</span></p>
                                         </div>
                                         <div class="info-item padd-15">
-                                            <p>Website : <span>www.domain.com</span></p>
+                                            <p>Website : <span>oscarkariuki.rf.gd</span></p>
                                         </div>
                                         <div class="info-item padd-15">
                                             <p>Email : <span>od30870@gmail.com</span></p>
@@ -292,7 +303,7 @@
                                                     <h4 class="timeline-title">Kenya Certificate of Primary Education</h4>
                                                     <p class="timeline-text">
                                                         ST Martins Kibagare Primary School studying for 8 years to achieve
-                                                        primary school.
+                                                        primary education.
                                                     </p>
                                                 </div>
                                             </div>
@@ -472,66 +483,186 @@
                     <div class="row">
                         <div class="portfolio-heading padd-15">
                             <h2>My Last Projects :</h2>
-
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="work__filters row">
+                        <span class="work__item active-work" data-filter="all">All</span>
+                        <span class="work__item" data-filter=".web">Web</span>
+                        <span class="work__item" data-filter=".app">App</span>
+                        <span class="work__item" data-filter=".design">Design</span>
+                    </div>
+
+                    <div class="work__container row">
                         <!--portfolio item start-->
-                        <div class="portfolio-item padd-15">
-                            <div class="portfolio-item-inner shadow-dark">
+                        <div class="portfolio-item padd-15 mix web">
+                            <div class="portfolio-item-inner shadow-dark padd-15">
                                 <div class="portfolio-img">
-                                    <img src="images/ecommerce website.jpg" alt="">
+                                    <img src="images/ecommerce5.jpg" alt="" style="height: 300px;">
+                                </div>
+
+                                <h3 class="work__title">App Design</h3>
+                                <span class="work__button">
+                                    Demo
+                                    <i class="uil uil-arrow-right work__button-icon"></i>
+                                </span>
+
+                                <div class="portfolio__item-details">
+                                    <h3 class="details__title">Oscar Kariuki Diaz</h3>
+                                    <p class="details__description">
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, nemo.
+                                    </p>
+                                    <ul class="details__info">
+                                        <li>Created - <span>4 dec 2020</span></li>
+                                        <li>Technologies - <span>html css</span></li>
+                                        <li>Role - <span>Frontend</span></li>
+                                        <li>View - <span><a href="#">www.domain.com</a></span></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                         <!--portfolio item end-->
 
                          <!--portfolio item start-->
-                        <div class="portfolio-item padd-15">
-                            <div class="portfolio-item-inner shadow-dark">
+                        <div class="portfolio-item padd-15 mix app">
+                            <div class="portfolio-item-inner shadow-dark padd-15">
                                 <div class="portfolio-img">
-                                    <img src="images/password generator.jpg" alt="">
+                                    <img src="images/pssword2.jpg" alt="">
+                                </div>
+
+                                <h3 class="work__title">App Design</h3>
+                                <span class="work__button">
+                                    Demo
+                                    <i class="uil uil-arrow-right work__button-icon"></i>
+                                </span>
+
+                                <div class="portfolio__item-details">
+                                    <h3 class="details__title">Oscar Kariuki Diaz</h3>
+                                    <p class="details__description">
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, nemo.
+                                    </p>
+                                    <ul class="details__info">
+                                        <li>Created - <span>4 dec 2020</span></li>
+                                        <li>Technologies - <span>html css</span></li>
+                                        <li>Role - <span>Frontend</span></li>
+                                        <li>View - <span><a href="#">www.domain.com</a></span></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                         <!--portfolio item end-->
 
                          <!--portfolio item start-->
-                        <div class="portfolio-item padd-15">
-                            <div class="portfolio-item-inner shadow-dark">
+                        <div class="portfolio-item padd-15 mix design">
+                            <div class="portfolio-item-inner shadow-dark padd-15">
                                 <div class="portfolio-img">
-                                    <img src="images/calculator.jpg" alt="">
+                                    <img src="images/calculator4.jpg" alt="" style="height: 300px;">
+                                </div>
+
+                                <h3 class="work__title">App Design</h3>
+                                <span class="work__button">
+                                    Demo
+                                    <i class="uil uil-arrow-right work__button-icon"></i>
+                                </span>
+
+                                <div class="portfolio__item-details">
+                                    <h3 class="details__title">Oscar Kariuki Diaz</h3>
+                                    <p class="details__description">
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, nemo.
+                                    </p>
+                                    <ul class="details__info">
+                                        <li>Created - <span>4 dec 2020</span></li>
+                                        <li>Technologies - <span>html css</span></li>
+                                        <li>Role - <span>Frontend</span></li>
+                                        <li>View - <span><a href="#">www.domain.com</a></span></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                         <!--portfolio item end-->
 
                          <!--portfolio item start-->
-                        <div class="portfolio-item padd-15">
-                            <div class="portfolio-item-inner shadow-dark">
+                        <div class="portfolio-item padd-15 mix app">
+                            <div class="portfolio-item-inner shadow-dark padd-15">
                                 <div class="portfolio-img">
                                     <img src="images/elearn.jpeg" alt="">
                                 </div>
-                            </div>
-                        </div>
-                        <!--portfolio item end-->
 
-                         <!--portfolio item start-->
-                        <div class="portfolio-item padd-15">
-                            <div class="portfolio-item-inner shadow-dark">
-                                <div class="portfolio-img">
-                                    <img src="images/guess.jpg" alt="">
+                                <h3 class="work__title">App Design</h3>
+                                <span class="work__button">
+                                    Demo
+                                    <i class="uil uil-arrow-right work__button-icon"></i>
+                                </span>
+
+                                <div class="portfolio__item-details">
+                                    <h3 class="details__title">Oscar Kariuki Diaz</h3>
+                                    <p class="details__description">
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, nemo.
+                                    </p>
+                                    <ul class="details__info">
+                                        <li>Created - <span>4 dec 2020</span></li>
+                                        <li>Technologies - <span>html css</span></li>
+                                        <li>Role - <span>Frontend</span></li>
+                                        <li>View - <span><a href="#">www.domain.com</a></span></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                         <!--portfolio item end-->
 
                          <!--portfolio item start-->
-                        <div class="portfolio-item padd-15">
-                            <div class="portfolio-item-inner shadow-dark">
+                        <div class="portfolio-item padd-15 mix web">
+                            <div class="portfolio-item-inner shadow-dark padd-15">
+                                <div class="portfolio-img">
+                                    <img src="images/guess2.jpeg" alt="" style="height: 307px;">
+                                </div>
+
+                                <h3 class="work__title">App Design</h3>
+                                <span class="work__button">
+                                    Demo
+                                    <i class="uil uil-arrow-right work__button-icon"></i>
+                                </span>
+
+                                <div class="portfolio__item-details">
+                                    <h3 class="details__title">Oscar Kariuki Diaz</h3>
+                                    <p class="details__description">
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, nemo.
+                                    </p>
+                                    <ul class="details__info">
+                                        <li>Created - <span>4 dec 2020</span></li>
+                                        <li>Technologies - <span>html css</span></li>
+                                        <li>Role - <span>Frontend</span></li>
+                                        <li>View - <span><a href="#">www.domain.com</a></span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!--portfolio item end-->
+
+                         <!--portfolio item start-->
+                        <div class="portfolio-item padd-15 mix design">
+                            <div class="portfolio-item-inner shadow-dark padd-15">
                                 <div class="portfolio-img">
                                     <img src="images/portfolio.jpeg" alt="">
+                                </div>
+
+                                <h3 class="work__title">App Design</h3>
+                                <span class="work__button">
+                                    Demo
+                                    <i class="uil uil-arrow-right work__button-icon"></i>
+                                </span>
+
+                                <div class="portfolio__item-details">
+                                    <h3 class="details__title">Oscar Kariuki Diaz</h3>
+                                    <p class="details__description">
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, nemo.
+                                    </p>
+                                    <ul class="details__info">
+                                        <li>Created - <span>4 dec 2020</span></li>
+                                        <li>Technologies - <span>html css</span></li>
+                                        <li>Role - <span>Frontend</span></li>
+                                        <li>View - <span><a href="#">www.domain.com</a></span></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -539,6 +670,39 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Portfolio Popup -->
+
+            <div class="portfolio__popup">
+                <div class="portfolio__popup-inner">
+                    <div class="portfolio__popup-content grid">
+                        <span class="portfolio__popup-close">
+                            <i class="uil uil-times"></i>
+                        </span>
+
+                        <div class="pp__thumbnail">
+                            <img src="images/calculator.jpg" alt="" class="portfolio__popup-img">
+                        </div>
+
+                        <div class="portfolio__popup-info">
+                            <div class="portfolio__popup-subtitle">Featured - <span>Design</span></div>
+
+                            <div class="portfolio__popup-body">
+                                <h3 class="details__title">Mobile app landing design & app maintain.</h3>
+                                <p class="details__description">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, nemo.
+                                </p>
+                                <ul class="details__info">
+                                    <li>Created - <span>4 dec 2020</span></li>
+                                    <li>Technologies - <span>html css</span></li>
+                                    <li>Role - <span>Frontend</span></li>
+                                    <li>View - <span><a href="#">www.domain.com</a></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!--Portfolio Section end-->
 
             <!--contact section start-->
@@ -594,7 +758,7 @@
                         </div>
 
                         <h4>Website</h4>
-                        <p>www.domain.com</p>
+                        <p>oscarkariuki.rf.gd</p>
                        </div>
                     <!--   Contact info item end   -->
                 </div>
@@ -656,9 +820,15 @@
             </section>
             <!--contact item end-->
         </div>
-        <!--Main Content End-->
     </div>
     <!--Main Container End-->
+
+    <!--========== SCROLL UP ==========-->
+
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="ri-arrow-up-line scrollup__icon"></i>
+    </a>
+
 
     <!-- Style Switcher  Start-->
 
@@ -684,8 +854,11 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" 
     integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ==" 
-    crossorigin="anonymous" 
-    referrerpolicy="no-referrer"></script>
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!--========== MIXITUP FILTER ==========-->
+    <script src="js/mixitup.min.js"></script>
+
     <script src="js/script.js"></script>
     <script src="js/style-switcher.js"></script>
 </body>

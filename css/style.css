@@ -165,7 +165,7 @@ ul{
     font-size: 30px;
     letter-spacing: 5px;
     position: relative;
-}   
+}
 
 .aside .logo a span{
     font-family: 'Clicker Script', cursive;
@@ -258,7 +258,8 @@ ul{
     padding: 5px 15px;
 }
 
-.aside .nav li a:hover{
+.aside .nav li a:hover,
+.aside .nav li a.active{
     color: var(--skin-color);
 }
 
@@ -613,7 +614,7 @@ h3.my-profession{
 .portfolio .portfolio-heading{
     flex: 0 0 100%;
     max-width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .portfolio .portfolio-heading h2{
@@ -638,6 +639,175 @@ h3.my-profession{
     width: 100%;
     display: block;
 }
+
+.portfolio-img img{
+    border-radius: 2.5rem;
+    padding-top: 15px;
+}
+
+.work__filters{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: .75rem;
+    margin-bottom: 3.5rem;
+}
+
+.work__item{
+    cursor: pointer;
+    color: var(--text-black-900);
+    padding: .25rem .75rem;
+    font-weight: 700;
+    border-radius: .5rem;
+}
+
+
+.work__title{
+    margin-top: .5rem;
+    font-size: 1rem;
+    font-weight: 900;
+    margin-bottom: .5rem;
+    color: var(--text-black-900);
+}
+
+.work__button{
+    color: var(--skin-color);
+    font-size: .875rem;
+    display: flex;
+    align-items: center;
+    column-gap: .25rem;
+    cursor: pointer;
+    margin-bottom: .5rem;
+}
+
+.work__button-icon{
+    font-size: 1rem;
+    transition: .3s;
+}
+
+.work__button:hover .work__button-icon{
+    transform: translateX(.25rem);
+}
+
+/* Active Item Work */
+
+.active-work{
+    background-color: var(--skin-color);
+    color: var(--title-color);
+}
+
+.work__item:hover{
+    transform: translateY(.25rem);
+}
+
+
+
+/* Portfolio Popup */
+
+.portfolio__popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-left: 17rem;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+.portfolio__item-details{
+    display: none;
+}
+
+
+.portfolio__popup.open{
+    opacity: 1;
+    visibility: visible;
+}
+
+.portfolio__popup-inner{
+    background-color: var(--bg-black-100);
+    width: 900px;
+    border-radius: .5rem;
+    padding: 2.5rem;
+    position: relative;
+}
+
+.portfolio__popup-content{
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    column-gap: 3rem;
+}
+
+.portfolio__popup-close{
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--skin-color);
+    cursor: pointer;
+}
+
+.portfolio__popup-img{
+    border-radius: .5rem;
+}
+
+.portfolio__popup-subtitle{
+    font-size: .875rem;
+    font-weight: 500;
+    margin-bottom: .25rem;
+    color: var(--text-black-900);
+}
+
+.portfolio__popup-subtitle span{
+    font-size: .875rem;
+    font-weight: 500;
+}
+
+.details__title{
+    font-size: 1.25rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: var(--text-black-900);
+}
+
+.details__description{
+    font-size: .875rem;
+    margin-bottom: 2rem;
+    color: var(--text-black-900);
+}
+
+.details__info li{
+    margin-bottom: .75rem;
+    text-transform: capitalize;
+    font-size: .875rem;
+    color: var(--text-black-900);
+}
+
+.details__info li:last-child{
+    margin-bottom: 0;
+}
+
+.details__info li span{
+    font-weight: normal;
+}
+
+.details__info li a{
+    text-transform: lowercase;
+    color: var(--skin-color);
+}
+
+.grid{
+    display: grid;
+}
+
 
 /* contact */
 
@@ -775,6 +945,36 @@ h3.my-profession{
     }
 }
 
+/*=============== SCROLL UP ===============*/
+.scrollup{
+  position: fixed;
+  right: 1rem;
+  bottom: -100%;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-color: var(--bg-black-900);
+  border: 8px solid var(--bg-black-900);
+  display: grid;
+  place-items: center;
+  z-index: 100;
+  transition: all 0.4s var(--transition);
+}
+
+.scrollup__icon{
+  font-size: 1.75rem;
+  color: var(--skin-color);
+}
+
+/* Show Scroll Up */
+.show-scroll{
+  bottom: 1.5rem;
+}
+
+
+/* Show Scroll Up*/
+
+
 /* Responsiveness  */
 @media (max-width: 1199px)
 {
@@ -788,6 +988,10 @@ h3.my-profession{
 
     .about .about-content .personal-info .info-item p span{
         display: block;
+        margin-left: 0;
+    }
+
+    .portfolio__popup{
         margin-left: 0;
     }
 }
@@ -805,9 +1009,13 @@ h3.my-profession{
         flex: 0 0 100%;
         max-width: 100%;
     }
-
+    
     .home .home-img{
         display: none;
+    }
+
+    .portfolio__popup{
+        margin-left: 0;
     }
 
 }
@@ -853,6 +1061,19 @@ h3.my-profession{
         z-index: 99;
     }
 
+    body.dark .aside .nav li a{
+    color: var(--bg-black-900);
+    }
+
+    body.dark .aside .nav li a:hover,
+    body.dark .aside .nav li a.active{
+        color: var(--skin-color);
+    }
+
+    body.dark .aside .logo a{
+    color: var(--bg-black-900);
+    }
+
     .aside.active{
         left: 0;
     }
@@ -866,6 +1087,40 @@ h3.my-profession{
         z-index: 100;
     }
 
+    .portfolio__popup{
+        margin-left: 0;
+    }
+
+    .portfolio__popup-inner{
+        width: 420px;
+        padding: 2.8rem 1.5rem 2.5rem;
+    }
+
+    .portfolio__popup-content{
+        grid-template-columns: 1fr;
+        row-gap: 1.6rem;
+    }
+
+    .details__title{
+        font-size: 1rem;
+    }
+
+    .portfolio__popup-close{
+        top: .5rem;
+    }
+
+    .work__container{
+        grid-template-columns: 330px;
+    }
+
+    .work__item{
+        font-weight: 500;
+    }
+
+    .work__filters{
+        column-gap: .25rem;
+    }
+
+
 
 }
-
